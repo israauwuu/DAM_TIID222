@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import {Saludo} from './components/Saludo.js';
 import {Saludo2} from './components/Saludo2.js';
+import {Perfil} from './components/Perfil.js';
 
 /*2. Zona "Main" */
 export default function App() {
@@ -22,7 +23,10 @@ export default function App() {
       <Saludo2></Saludo2>
       <Saludo2/>
 
+      <Text>----------------------------</Text>
+      <Perfil/>
 
+      <Text>----------------------------</Text>
       <StatusBar style="auto" />
 
     </View>
