@@ -13,11 +13,11 @@ export default function App() {
     <View style={styles.container}>
 
     
-      <Perfil nombre="Israel" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"/>
+      <Perfil style={styles.tarjeta1} nombre="Israel" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"/>
 
-      <Perfil nombre="Emilio" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"/>
+      <Perfil style={styles.tarjeta2} nombre="Emilio" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"/>
 
-      <Perfil nombre="Jorge" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"  />
+      <Perfil style={styles.tarjeta3} nombre="Jorge" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"  />
 
       <StatusBar style="auto" />
 
@@ -34,4 +34,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  tarjeta1:{
+    backgroundColor:'lightblue',
+  },
+  tarjeta2:{
+    backgroundColor:'lightgreen',
+  },
+
+  tarjeta3:{
+    backgroundColor:'lightyellow',
+  }
+
 });
