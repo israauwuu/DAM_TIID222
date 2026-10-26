@@ -1,29 +1,19 @@
 
 /*1. Zona de importaciones */
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import {Saludo} from './components/Saludo.js';
-import {Saludo2} from './components/Saludo2.js';
-import {Perfil} from './components/Perfil.js';
+import { StyleSheet, View, Text} from 'react-native';
+import MenuScreen from './screens/MenuScreen';
 
 /*2. Zona "Main" */
 export default function App() {
-  return (
-
+  return(
     <View style={styles.container}>
 
-    
-      <Perfil style={styles.tarjeta1} nombre="Israel" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"/>
-
-      <Perfil style={styles.tarjeta2} nombre="Emilio" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"/>
-
-      <Perfil style={styles.tarjeta3} nombre="Jorge" carrera="ITIID" materia="Programación Móvil" cuatrimestre="4to cuatrimestre"  />
-
+        <MenuScreen></MenuScreen>
+        <Text></Text>
       <StatusBar style="auto" />
-
     </View>
-
-  );
+  )
 }
 
 /*3. Zona de estilos  */
@@ -31,19 +21,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    flexDirection: 'column',
+    alignItems: 'stretch',
     justifyContent: 'center',
+    width: '100%'
   },
-
-  tarjeta1:{
-    backgroundColor:'lightblue',
-  },
-  tarjeta2:{
-    backgroundColor:'lightgreen',
-  },
-
-  tarjeta3:{
-    backgroundColor:'lightyellow',
-  }
-
 });
