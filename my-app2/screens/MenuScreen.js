@@ -31,8 +31,8 @@ export default function MenuScreen() {
             return<FlatList/>
         case 'ImageBackground':
             return<ImageBackground/>
-        case 'ModalBotton':
-            return<ModalBotton/>
+        case 'ModalBottom':
+            return<ModalBottom/>
         case 'ActivityIndicator':
             return<ActivityIndicator/>
 
@@ -63,6 +63,7 @@ export default function MenuScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    gap: 20,
     backgroundColor: '#fff',
     flexDirection: 'column',
     alignItems: 'center',

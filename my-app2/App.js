@@ -10,7 +10,7 @@ export default function App() {
     <View style={styles.container}>
 
         <MenuScreen></MenuScreen>
-        <Text></Text>
+        
       <StatusBar style="auto" />
     </View>
   )
