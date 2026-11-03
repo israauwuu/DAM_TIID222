@@ -1,32 +1,30 @@
-
-/* 1. Zona de importaciones */
-import { useState } from 'react';
+/*1. Zona de importaciones */
 import { StyleSheet, View, Text } from 'react-native';
-import SwitchMio from '../components/SwitchMio';
+import { useState } from 'react';
+import SwitchMio from '../components/SwitchMio'
 
-/* 2. Zona Main */
+/*2. Zona "Main" */
 export default function PressableSwitch() {
-  const [oscuro, setOscuro] = useState(false);
+  const [oscuro, setOscuro]=useState(false);
 
-  return (
-    <View
-      style={[styles.container, {backgroundColor: oscuro ? '#2c2b2b' : '#FFFFFF'}]}
-    >
-      <Text
-        style={[styles.texto, {color: oscuro ? '#FFFFFF' : '#000000'}]}
-      >
+  return(
+    
+    <View style={[styles.container, {backgroundColor: oscuro ? '#393838' : '#FFFFFF'}]}>
+
+      <Text style={[styles.texto, {color: oscuro?'#FFFFFF' : '#000000'}]}>
         {oscuro ? 'Modo oscuro activado' : 'Modo claro activado'}
       </Text>
 
       <SwitchMio
-        oscuro={oscuro}
-        cambiarModo={setOscuro}
+      oscuro={oscuro}
+      cambiarModo={setOscuro}
       />
+
     </View>
-  );
+  )
 }
 
-/* 3. Zona de estilos */
+/*3. Zona de estilos  */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -36,7 +34,7 @@ const styles = StyleSheet.create({
   },
 
   texto: {
-    fontSize: 20,
-    marginBottom: 20,
-  },
+    fontSize:20,
+    marginBottom:20,
+  }
 });
