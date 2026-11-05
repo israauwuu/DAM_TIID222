@@ -7,8 +7,8 @@ import Tarjetas from './Tarjetas.js';
 import SafeScreen from './SafeScreen.js';
 import PressableSwitch from './PressableSwitch.js'
 import TextInput from './TextInput.js'
-import FlatList from './FlatList.js'
-import ImageBackground from './ImageBackground.js'
+import FlatListScreen from './FlatListScreen.js'
+import ImageBackgroundScreen from './ImageBackgroundScreen.js'
 import ModalBottom from './ModalBottom.js'
 import ActivityIndicator from './ActivityIndicator.js'
 
@@ -28,9 +28,9 @@ export default function MenuScreen() {
         case 'TextInput':
             return<TextInput/>
         case 'FlatList':
-            return<FlatList/>
+            return<FlatListScreen/>
         case 'ImageBackground':
-            return<ImageBackground/>
+            return<ImageBackgroundScreen/>
         case 'ModalBottom':
             return<ModalBottom/>
         case 'ActivityIndicator':
