@@ -27,19 +27,72 @@ export default function ImageBackgroundScreen() {
   }
   
   return(
-   
-   <ImageBackground 
-   source = {{ uri: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}}/>
-  )
+    <ImageBackground
+      source={require('../assets/fondo.jpg')}
+      style={styles.container}
+      resizeMode="cover"
+    >
+      <View style={styles.overlay}>
+          <Text style={styles.titulo}>Bienvenidos</Text>
+      </View>
+
+      <StatusBar style='light'></StatusBar>
+    </ImageBackground>
+  );
 }
 
-/*3. Zona de estilos  */
 const styles = StyleSheet.create({
-  container: {
+    
+  splashContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#000000', 
+    width: '100%',
+  },
+
+  splashIcon: {
+    fontSize: 80,
+  },
+
+  splashTitle: {
+    color: '#fff',
+    fontSize: 40,
+    fontWeight: 'bold',
+    marginTop: 10,
+  },
+
+  splashSub: {
+    color: '#a7f3d0',
+    fontSize: 18,
+    marginTop: 5,
+  },
+
+  splashLoading: {
+    color: '#d1fae5',
+    fontSize: 12,
+    marginTop: 20,
+  },
+      
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+
+  overlay: {
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    padding: 20,
+    paddingHorizontal: 40,
+    borderRadius: 15,
+    alignItems: 'center',
+  },
+  
+  titulo: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
